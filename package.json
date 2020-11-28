@@ -1,0 +1,18 @@
+{
+  "name": "slotmachine",
+  "version": "0.0.1",
+  "description": "slot machine for CRO campaigns",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ."
+  },
+  "keywords": [
+    "slotmachine"
+  ],
+  "author": "VLadimir Oganesov",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
