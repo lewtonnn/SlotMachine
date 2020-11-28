@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const SlotMachine = require('./index');
+const SlotMachine = require('./SlotMachine');
 
 describe('Init a new Slot Machine', function() {
   it('should initialize a new Slot Machine', function() {
@@ -97,6 +97,21 @@ describe('Test Slot Machine methods', function() {
     expect(slotValues).to.be.a('array');
     expect(slotValues.length).to.be.equal(3);
     expect(slotValuesSum).to.be.within(6, 15);
+
+  });
+
+  it('should return: 3 times array with slot values and then fail', function() {
+    const slotMachine = new SlotMachine({
+      ranges: ['13-15', '10-13', '6-9'],
+      numberOfSlots: 3,
+      maxSingleSlotValue: 6,
+    });
+
+    expect(slotMachine.spin()).to.be.a('array');
+    expect(slotMachine.spin()).to.be.a('array');
+    expect(slotMachine.spin()).to.be.a('array');
+    expect(slotMachine.spin())
+        .to.equal('Fail! No more spin attempts');
 
   });
 });

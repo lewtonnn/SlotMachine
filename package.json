@@ -2,7 +2,7 @@
   "name": "slotmachine",
   "version": "0.0.1",
   "description": "slot machine for CRO campaigns",
-  "main": "index.js",
+  "main": "SlotMachine.js",
   "scripts": {
     "test": "mocha ."
   },
