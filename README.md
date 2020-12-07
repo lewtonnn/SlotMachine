@@ -1,1 +1,1 @@
-Simple Slot MAchine class
+Simple Slot Machine
